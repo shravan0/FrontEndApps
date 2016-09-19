@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <style>
+         @-webkit-keyframes bounce {
+    from, to  {
+      bottom: 0;
+      -webkit-animation-timing-function: ease-out;
+    }
+    50% {
+      bottom: 220px;
+      -webkit-animation-timing-function: ease-in;
+    }
+  }
+  @keyframes bounce {
+    from, to  {
+      botttom: 0;
+      animation-timing-function: ease-out;
+    }
+    50% {
+      bottom: 220px;
+      animation-timing-function: ease-in;
+    }
+  }
+  </style>
+   <style>
+         @-webkit-keyframes travel {
+    from {              }
+    to   { top: 640px; }
+  }
+  @keyframes travel {
+    from {              }
+    to   { top: 640px; }
+  }
+   </style>
+   <style>
+        *{
+        	box-sizing:border-box;
+        }
+        	.wrapper{
+        		padding: 20px 0;
+        		margin: 0 auto;
+        		width:100%;
+
+        	}
+        	.field{
+        		border: 2px solid gray;
+        		border-radius: 5px;
+        		width: 90%;
+        		background: yellow;
+        		min-height: 500px;
+        		margin: 0 auto;
+        		position: relative;
+        	}
+        	.paddle{
+        		width: 65px;
+        		height: 5px;
+        		background: black;
+        		border-radius: 3px;
+        		position: absolute;
+        		bottom: 20px;
+        		left: 20px;
+        	}
+        	.ball{
+        		position: absolute;
+        		width:20px;
+        		height: 20px;
+        		border-radius: 50%;
+        		background: orange;
+        		border: 1px solid gray;
+        		margin: 20px;
+        		  -webkit-animation-name: bounce ,spin;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 4.2s;
+    animation-name: bounce,spin;
+    animation-iteration-count: infinite;
+    animation-duration: 4.2s
+        	}
+        </style>
+       
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+         <script>
+        $(document).ready(function() {
+        	module1.init();
+        	
+        });
+        	var module1=(function($){
+        			init=function(){
+        				$(document).on("keypress keydown",function(event){
+        					//console.log("hello" + event.keyCode);
+        					if(event.keyCode===37){
+        						var position=$(".paddle").position().left
+        						if(position!="10"){
+        							$(".paddle").css("left",position -10 +"px");
+        						}
+        						else{
+        							return false;
+        						}
+        					}
+        					else if(event.keyCode===39){
+        						var position=$(".paddle").position().left
+        						if(position<340){
+        							$(".paddle").css("left",position +10 +"px");
+        						}
+        						else{
+        							return false;
+        						}
+        							
+        						
+        						
+        						
+        					}
+        					else{
+        						return false;
+        					}
+        				})
+        			};
+        			return {
+        				init:init
+        			}
+        	})(jQuery);
+        </script>
+
+        <div class="wrapper">
+        	<div class="field">
+        		<div class="paddle"></div>
+        		<div class="ball"></div>
+        	</div>	
+		</div>
+
+        <div>
+            <label>S</label>
+            <label>H</label>
+            <label>R</label>
+            <label>A</label>
+            <label>V</label>
+            <label>A</label>
+            <label>N</label>
+            <label>K</label>
+            <label>U</label>
+            <label>M</label>
+            <label>A</label>
+            <label>R</label>
+        </div>    
+<a href="http://maps.google.com/?saddr=Current%20Location&daddr= 894%20Granville%20Street%20Vancouver%20BC%20V6Z%201K3">Find Us</a>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+body {
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(0deg, rgb(255, 255, 255) 8.80952380952381%, rgb(0, 0, 0) 100%) rgb(255, 255, 255);
+  background:    -moz-linear-gradient(0deg, rgb(255, 255, 255) 8.80952380952381%, rgb(0, 0, 0) 100%) rgb(255, 255, 255);
+  background:      -o-linear-gradient(0deg, rgb(255, 255, 255) 8.80952380952381%, rgb(0, 0, 0) 100%) rgb(255, 255, 255);
+  background:     -ms-linear-gradient(0deg, rgb(255, 255, 255) 8.80952380952381%, rgb(0, 0, 0) 100%) rgb(255, 255, 255);
+  background:         linear-gradient(450deg, rgb(255, 255, 255) 8.80952380952381%, rgb(0, 0, 0) 100%) rgb(255, 255, 255);
+  font: 400 1em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+}
+
+.element {
+  position: relative;
+  float: right;
+  clear: both;
+  z-index: 0;
+  width: 35.9166666666%;
+  height: 486px;
+  margin: -121px 51.33203% 0 0;
+}
+
+._button {
+  display: block;
+  position: relative;
+  float: left;
+  z-index: 2;
+  width: 7.3333333333%;
+  height: 40px;
+  margin: 135px 0 0 3.05078%;
+  border-radius: 3px;
+  background-color: rgb(222, 222, 222);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+._input {
+  display: block;
+  position: relative;
+  float: left;
+  z-index: 1;
+  width: 20.4%;
+  height: 46px;
+  margin: 129px 0 0 16.79948%;
+  padding: 0 10px;
+  background-color: rgb(242, 242, 242);
+  font-size: 0.813em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+}

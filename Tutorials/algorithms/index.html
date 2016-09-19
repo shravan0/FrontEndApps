@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+        function totalPermutations(){
+        	var actual="ab";
+        	var test=[]
+        	var reverse=actual.split('').reverse();
+        	//console.log(reverse);
+        	//var firstHalf=permutations(actual);
+        	//var secondtHalf=permutations(actual);
+        	for(var i=0;i<actual.length-1;i++){
+        		test.push( actual);
+        	actual=	actual.split("").reverse().join("");
+        		test=permutations(actual);
+        	}
+        	
+        	console.log(test);
+        }
+           function permutations(per){
+           	//console.log(per);
+           	var a=[];
+           	var test=per;
+           	var temp=[];
+           
+           	
+           	i=0;
+           for(j=0;j<per.length;j++){
+           		var first=test[0];
+           		while(i<test.length && test[i]!=undefined){
+           			
+           			temp[i]=test[i+1];
+           			if(i==test.length-1){
+           				temp[temp.length-1]=first;
+           			}
+           			i++;
+           		}
+           		i=0;
+           		test=temp;
+           		//nsole.log(temp);
+           		//return temp;
+           		temp=temp.join('');
+
+           		//r=temp.reverse().join('');
+           		r=temp;
+           		for(k=0;k<per.length;k++){
+           			r=r.split("").reverse().join('');
+           			a.push(r);
+           		}
+           		
+           		//console.log(temp);
+           		
+
+           		
+           		a.push(temp);
+           		
+           		temp=[];
+
+           }
+           		return a;
+           	//	permutations(test.length);
+         
+           		
+           }
+           totalPermutations();
+
+           var algorithm={
+           	permutations:function(){
+
+           	},
+           	findNo:function(text){
+           		
+           		
+           	},
+            maxSum:function(){
+              var arr=[5,3,9,7];
+                var max;
+              for(var i=0;i<arr.length;arr++){
+              max=arr[i];
+                if(arr[i+1]>max ){
+                  max=arr[i+1];
+                }
+              }
+              console.log(max);
+            },
+            fibonacci:function(){
+              var test=[0,1];
+              var modifiedInput=[];
+              for(var i in test){
+                this.processInput(tes[i))
+              }
+              this.processInput:function(input){
+                if(typeof(input)==="string"){
+                    modifiedInput.push()
+                }
+                else if(typeof(input)==="object"){
+
+                }
+                 else if(typeof(input)==="function"){
+                  
+                }
+                 else if(typeof(input)==="undefined"){
+                  
+                }
+                 else if(ty)
+              },
+            this.printSequence:function(){
+               for (var i=2;i<10;i++){
+                test[i]=test[i-2]+test[i-1];
+              }
+            }
+              
+             
+              this.processInput(tes[i));
+              return test.join("");
+            }
+
+           }
+
+        </script>
+    </body>
+</html>

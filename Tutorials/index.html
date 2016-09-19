@@ -1,0 +1,88 @@
+<html>
+	<head>
+        <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<script>
+		var t=function test(){
+            this.a=1;
+            this.b=1;
+            this.c=1;
+            this.keyValues=[];
+            this.greet=function(){
+                return true;
+            };
+            this.keys=function(){
+               // console.log(Object.keys(this) +"   "+ Object.keys(this).length);
+                this.keyValues=Object.keys(this);
+                return JSON.stringify(this.keyValues);
+
+            };
+            this.values=function(){
+                var j=0;
+            
+                for(var i in this){
+                    this.keyValues.push( i)
+                    //console.log("Key is "+ i+ "  \n value is "+ this[i] );
+                    j++;
+                }
+                //console.log(j);
+                return (JSON.stringify(this.keyValues) );
+               
+            }
+            this.ownProperty=function(){
+                return Object.getOwnPropertyNames(this);
+               // console.log( Object.getOwnPropertyNames(this) + " " +Object.getOwnPropertyNames(this).length);
+            }
+        }
+		t.prototype.greet1=function(){
+           // console.log("false");
+        };
+		//var Test=new t();
+        
+
+//getKeysAndValues();
+ //Test.values();
+ //Test.keys();
+ //Test.ownProperty();
+ //Test.values();
+
+$(function(){
+     $("#testObject").html(t +" "); 
+     
+     $("#keys1Button").on("click",function(){
+       
+       // Test.keys.apply(Test);
+        var Test=new t();
+        $("#keys1").empty().html( "Object.keys"     +Test.keys.apply(Test));
+     });
+     $("#keys2Button").on("click",function(){
+       
+       // Test.keys.apply(Test);
+        var Test=new t();
+        $("#keys2").empty().html( "for i in object\t" +Test.values.apply(Test));
+     });
+     $("#keys3Button").on("click",function(){
+       
+       // Test.keys.apply(Test);
+        var Test=new t();
+        $("#keys3").empty().html( "Object.getOwnPropertyNames\t" +Test.ownProperty.apply(Test));
+     });
+
+})
+	</script>
+	</head>
+    <body>
+        <div>
+            <pre id="testObject">
+               
+            </pre>
+            <button id="keys1Button"> object.keys</button>
+            
+             <button id="keys2Button"> object.getOwnPropertyNames</button>
+              <button id="keys3Button"> object.for</button>
+
+              <div id="keys1"></div>
+               <div id="keys2"></div>
+                <div id="keys3"></div>
+           </div> 
+    </body>
+</html>

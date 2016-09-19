@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+       
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
+        <script>
+            function DatePicker(date){
+            	this.month=date.getMonth()+1;
+            	this.date=date.getDate();
+            	this.year=date.getYear();
+
+  		 	}
+  		 	DatePicker.prototype={
+  		 		getCurrentDate:function(){
+  		 			return this.date;
+  		 		},
+  		 		getCurrentMonth:function(){
+  		 			return this.month;
+  		 		},
+  		 		getCurrentYear:function(){
+  		 			return this.year;
+  		 		},
+  		 		getPreviousMonth:function(){
+  		 			if(this.getCurrentMonth >1 && this.getCurrentMonth() !=undefined){
+  		 				return this.getCurrentMonth()-1;
+  		 			}
+  		 			else{
+  		 				this.month=0;
+  		 				this.getNextMonth();
+  		 			}
+  		 		},
+  		 		getNextMonth:function(){
+  		 			if(this.getCurrentMonth()+1<12 && this.getCurrentMonth() !=undefined){
+  		 				this.month=this.month+1;
+  		 				return (this.getCurrentMonth());
+  		 			}
+  		 			else{
+  		 				this.month=0;
+  		 				this.getNextMonth();
+  		 			}
+  		 		},
+  		 		getNextYear:function(){
+  		 			return this.year+1;
+  		 		},
+  		 		getWeekends:function(){
+
+  		 		},
+  		 		getNationalHolidays:function(){
+
+  		 		}
+
+  		 	}
+        </script>
+    </body>
+</html>
