@@ -1,0 +1,14 @@
+.wrapper{
+    border:1px solid red;
+    padding:20px;
+    background:wheat;
+}
+.left{
+    float:left;
+}
+.clear{
+    clear: both;
+}
+.overflow{
+    overflow:hidden;
+}
