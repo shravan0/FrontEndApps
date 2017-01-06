@@ -1,0 +1,7 @@
+.side-bar{
+    width:30%;
+    border:1px solid gray;
+    background: wheat;
+    height:100%;
+    min-height:768px;
+}
