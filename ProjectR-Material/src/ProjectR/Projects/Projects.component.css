@@ -1,0 +1,10 @@
+.pr-item{
+    margin: 20px;
+    border:1px solid gray;
+    border-radius: 5px;
+    background: gray;
+    padding: 20px;
+}
+.pr-item>div{
+    margin-bottom: 10px;
+}

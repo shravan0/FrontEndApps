@@ -1,0 +1,44 @@
+<div class="wrapper">
+    <div class="flex-box">
+        <div class="flex4">
+           <ul>
+                <li>
+                    <div class="pr-item" *ngFor="let Project of Projects">
+                        <div> 
+                            <span class="bold"> Title: </span>{{Project.Title}} </div>
+                        <div>
+                            <span class="bold">Client: </span>
+                            <span>{{Project.Client}}</span>
+                        </div>
+                        <div> <span class="bold">Location: </span>
+                            <span> {{Project.Location}} </span>
+                          
+                        </div>
+                        <div>
+                            <span class="bold">Dates: </span>
+                            <span>
+                               {{Project.Dates}}
+                            </span>
+                         </div> 
+                         <div>
+                            <span class="bold">Description: </span>
+                            <span>
+                               {{Project.Description}}
+
+                            </span>
+                         </div> 
+                          <div>
+                            <span class="bold">Responsibilities: </span>
+                            <span>
+                               {{Project.Responsibilities}}
+                            </span>
+                         </div>   
+                        
+                    </div>    
+                </li>
+                <li>Project 2</li>
+                <li>Project 3</li>
+            </ul>
+        </div>     
+     </div>   
+</div>
